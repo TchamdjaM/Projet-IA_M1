@@ -1,0 +1,20 @@
+# Ne pas suivre les fichiers temporaires générés par Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ne pas suivre les fichiers temporaires générés par Jupyter Notebook
+*.ipynb_checkpoints/
+
+# Ne pas suivre les données nettoyées (créées automatiquement)
+data/processed/
+
+# Ne pas suivre les fichiers générés par les scripts (ex : alertes, prédictions)
+outputs/
+
+# Ne pas suivre les fichiers Power BI
+*.pbix
+
+# Ne pas suivre les fichiers systèmes (Windows / Mac)
+.DS_Store
+Thumbs.db
