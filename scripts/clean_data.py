@@ -3,7 +3,7 @@ from datetime import timedelta
 import os
 
 # Chargement du dataset brut
-DATA_PATH = "../data/raw/SuperMarket Analysis.csv"
+DATA_PATH = "../PROJET IA_M1/data/raw/SuperMarket Analysis.csv"
 df = pd.read_csv(DATA_PATH)
 
 # Nettoyage de base
@@ -25,7 +25,7 @@ df['Shelf_life_days'] = df['Product line'].map(shelf_life_map)
 df['Expiration_date'] = df['Date'] + pd.to_timedelta(df['Shelf_life_days'], unit='d')
 
 # Sauvegarde des données nettoyées
-os.makedirs("../data/processed/", exist_ok=True)
-df.to_csv("../data/processed/cleaned_data.csv", index=False)
+os.makedirs("../PROJET IA_M1/data/processed/", exist_ok=True)
+df.to_csv("../PROJET IA_M1/data/processed/cleaned_data.csv", index=False)
 
 print("✅ Données nettoyées et enrichies enregistrées.")
